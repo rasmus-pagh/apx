@@ -5,7 +5,7 @@ class DataFile:
 
   url_prefix = 'https://rasmuspagh.net/data/'
   data_directory = 'apx/data/'
-  graph_files = ['routes.txt','petersen.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
+  graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
 
   def __init__(self, filename):
     if not os.path.isfile(self.data_directory + filename):
