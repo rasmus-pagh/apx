@@ -8,8 +8,8 @@ class DataFile:
   graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
 
   def __init__(self, filename):
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    if not os.path.exists(data_directory):
+        os.makedirs(data_directory)
     if not os.path.isfile(self.data_directory + filename):
       urllib.request.urlretrieve(self.url_prefix + filename, self.data_directory + filename)  
     if not os.path.isfile(self.data_directory + filename):
