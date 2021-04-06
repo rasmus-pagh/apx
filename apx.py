@@ -3,9 +3,9 @@ import os.path
 
 class DataFile:
 
-  self.url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
-  self.data_directory = 'data/'
-  self.graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
+  url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
+  data_directory = 'data/'
+  graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
 
   def __init__(self, filename):
     if not os.path.exists(self.data_directory):
