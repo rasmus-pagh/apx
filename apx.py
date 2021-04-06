@@ -3,13 +3,13 @@ import os.path
 
 class DataFile:
 
-  url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
-  data_directory = 'data/'
-  graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
+  self.url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
+  self.data_directory = 'data/'
+  self.graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
 
   def __init__(self, filename):
-    if not os.path.exists(data_directory):
-        os.makedirs(data_directory)
+    if not os.path.exists(self.data_directory):
+        os.makedirs(self.data_directory)
     if not os.path.isfile(self.data_directory + filename):
       urllib.request.urlretrieve(self.url_prefix + filename, self.data_directory + filename)  
     if not os.path.isfile(self.data_directory + filename):
