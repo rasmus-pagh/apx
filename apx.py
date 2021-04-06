@@ -3,7 +3,7 @@ import os.path
 
 class DataFile:
 
-  url_prefix = 'https://rasmuspagh.net/data/'
+  url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
   data_directory = 'data/'
   graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
 
