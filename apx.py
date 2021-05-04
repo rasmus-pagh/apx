@@ -5,7 +5,7 @@ class DataFile:
 
   url_prefix = 'https://raw.githubusercontent.com/rasmus-pagh/apx/main/data/'
   data_directory = 'data/'
-  graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt']
+  graph_files = ['routes.txt','petersen.txt','petersenstar.txt','star.txt','clique.txt','cycles.txt','lotr.txt','karate.txt', 'noisybiclique.txt']
 
   def __init__(self, filename):
     if not os.path.exists(self.data_directory):
@@ -22,7 +22,7 @@ class DataFile:
 
   def __next__(self):
     line = self.f.readline()
-    if line == '':
+    if line == '': 
       raise StopIteration
     return [ x for x in line.rstrip('\n').split(' ') if x != '']
     
