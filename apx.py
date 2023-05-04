@@ -137,5 +137,5 @@ class LinearProgram:
     res = linprog(sign * c, A_ub=-sign*A, b_ub=-sign*b, options={'sym_pos': False, 'lstsq': True})
     solution_dict = {}
     for column_name in self.map_name_column:
-      solution_dict[column_name] = sign * res.x[self.map_name_column[column_name]]
+      solution_dict[column_name] = res.x[self.map_name_column[column_name]]
     return sign * res.fun, solution_dict
